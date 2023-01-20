@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "blog",
     "rest_framework",
     "django_filters",
+    "user",
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,7 @@ REST_FRAMEWORK = {
         "rest_framework.filters.SearchFilter",
     
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
 }
